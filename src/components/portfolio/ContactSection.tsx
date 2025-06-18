@@ -43,7 +43,7 @@ export default function ContactSection() {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_email: 'lightify6@gmail.com', // Your email
+          to_email: 'abhishek@example.com', // Your email
         },
         publicKey
       );
@@ -71,14 +71,12 @@ export default function ContactSection() {
     >
       <div className="max-w-4xl mx-auto">
 
-
         <SectionHeader
-          heading="Let's Work Together"
-          description="Ready to bring your ideas to life? I'm always excited to work on interesting projects and collaborate with amazing people. Let's create something extraordinary together."
+          heading="Let's Connect"
+          description="I'm always excited to discuss new opportunities, collaborate on projects, or just chat about technology. Feel free to reach out!"
           tagIcon='solar:chat-line-bold'
           tagText='Contact'
           centered={true}
-
         />
 
         {/* Contact Form */}
@@ -151,7 +149,7 @@ export default function ContactSection() {
                 value={formData.message}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-all duration-300 resize-none"
-                placeholder="Tell me about your project or idea..."
+                placeholder="Tell me about your project or opportunity..."
               />
             </motion.div>
 
@@ -203,7 +201,6 @@ export default function ContactSection() {
                   <p className="text-green-600 text-left dark:text-green-500 text-sm mt-1">
                     Thank you for reaching out. I&apos;ll get back to you soon!
                   </p>
-                  {/* add a button to close the message */}
                   <button
                     onClick={() => setSubmitStatus('idle')}
                     className="absolute top-1 right-1  text-red-500 rounded-md"
@@ -224,9 +221,8 @@ export default function ContactSection() {
                     <span className="font-medium">Failed to send message</span>
                   </div>
                   <p className="text-red-600 text-left dark:text-red-500 text-sm mt-1">
-                    Please try again or contact me directly at lightify6@gmail.com
+                    Please try again or contact me directly at abhishek@example.com
                   </p>
-                  {/* add a button to close the message */}
                   <button
                     onClick={() => setSubmitStatus('idle')}
                     className="absolute top-1 right-1  text-red-500 rounded-md"
@@ -251,7 +247,7 @@ export default function ContactSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="mailto:lightify6@gmail.com"
+                href="mailto:abhishek@example.com"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 border-2 border-gray-300 hover:border-gray-400 dark:border-gray-600 dark:hover:border-gray-500 rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <Icon icon="solar:mailbox-bold-duotone" width={18} height={18} />
@@ -265,7 +261,7 @@ export default function ContactSection() {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 border-2 border-gray-300 hover:border-gray-400 dark:border-gray-600 dark:hover:border-gray-500 rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <Icon icon="solar:download-outline" width={18} height={18} />
-                Download CV
+                Download Resume
               </Link>
             </motion.div>
           </div>
@@ -273,4 +269,4 @@ export default function ContactSection() {
       </div>
     </motion.section>
   );
-} 
+}

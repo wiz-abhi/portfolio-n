@@ -7,13 +7,13 @@ import "./globals.css";
 const inter = Space_Grotesk({ subsets: ["latin"], weight: ["500", "600", "700"] });
 
 export const metadata: Metadata = {
-  title: "Muhammad Ramazan - Full Stack Developer",
-  description: "Portfolio of Muhammad Ramazan, a passionate full-stack developer specializing in modern web technologies, React, Next.js, and innovative digital solutions.",
-  keywords: "Muhammad Ramazan, Full Stack Developer, React, Next.js, Web Development, Portfolio",
-  authors: [{ name: "Muhammad Ramazan" }],
+  title: "Abhishek Gupta - Computer Science Student & Developer",
+  description: "Portfolio of Abhishek Gupta, a passionate B.Tech CSE student specializing in web development, programming, and innovative software solutions.",
+  keywords: "Abhishek Gupta, Computer Science Student, Web Developer, B.Tech CSE, Programming, Portfolio",
+  authors: [{ name: "Abhishek Gupta" }],
   openGraph: {
-    title: "Muhammad Ramazan - Full Stack Developer",
-    description: "Portfolio of Muhammad Ramazan, a passionate full-stack developer specializing in modern web technologies.",
+    title: "Abhishek Gupta - Computer Science Student & Developer",
+    description: "Portfolio of Abhishek Gupta, a passionate B.Tech CSE student specializing in web development and programming.",
     type: "website",
   },
 };

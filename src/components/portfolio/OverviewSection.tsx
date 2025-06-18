@@ -83,7 +83,7 @@ export default function OverviewSection() {
           tagText="Get To Know Me"
           tagIcon="solar:user-heart-bold"
           heading="About Me"
-          description="Crafting digital experiences with passion, precision, and purpose"
+          description="A passionate computer science student on a journey to create meaningful technology"
           showUnderline={true}
           centered={true}
         />
@@ -109,28 +109,26 @@ export default function OverviewSection() {
                   <div>
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-gray-900 dark:text-white flex items-center gap-2 md:gap-3">
                       <span className="text-2xl sm:text-3xl md:text-4xl">👋</span>
-                      Hello, I&apos;m Muhammad Ramazan
+                      Hello, I&apos;m Abhishek Gupta
                     </h3>
                     <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-4 md:mb-6">
-                      A passionate <span className="font-bold text-blue-600 dark:text-blue-400">Full Stack Developer</span> and
+                      A passionate <span className="font-bold text-blue-600 dark:text-blue-400">B.Tech Computer Science</span> student in my
                       <span className="font-bold text-purple-600 dark:text-purple-400">
-                        &nbsp; AI enthusiast</span> with
-                      <span className="font-bold text-green-600 dark:text-green-400"> 5+ years</span> of experience crafting
-                      digital experiences that users love.
+                        &nbsp; 2nd year</span>, dedicated to learning and building innovative solutions through code.
                     </p>
                   </div>
 
                   {/* Expanded About Content */}
                   <div className="space-y-3 md:space-y-4 border-t border-gray-200/50 dark:border-gray-700/50 pt-4 md:pt-6">
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                      I specialize in building scalable web and mobile applications using React, Next.js, TypeScript,
-                      and modern development technologies. I thrive on turning complex problems into elegant solutions
-                      that users love.
+                      I'm currently pursuing my Bachelor's in Computer Science Engineering, where I'm developing strong foundations
+                      in programming, data structures, algorithms, and software development. I love working on projects that
+                      challenge me to learn new technologies and solve real-world problems.
                     </p>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                      Beyond work, I love exploring emerging technologies, contributing to open-source projects, and
-                      mentoring aspiring developers. I believe in continuous learning and staying at the forefront of
-                      technological innovation.
+                      When I'm not coding, you'll find me exploring new frameworks, contributing to open-source projects,
+                      or participating in coding competitions. I believe in continuous learning and staying updated with
+                      the latest trends in technology.
                     </p>
                   </div>
 
@@ -141,7 +139,7 @@ export default function OverviewSection() {
                       Core Technologies
                     </h4>
                     <div className="flex flex-wrap gap-2 md:gap-3">
-                      {["AI Integration", "React", "Next.js", "TypeScript", "Node.js", "Python", "AWS", "UI/UX Design", "Healthcare IT"].map((skill, index) => (
+                      {["JavaScript", "React", "Node.js", "Python", "Java", "HTML/CSS", "Git", "MongoDB", "Express.js"].map((skill, index) => (
                         <motion.span
                           key={skill}
                           initial={{ opacity: 0, scale: 0 }}
@@ -159,7 +157,7 @@ export default function OverviewSection() {
                 </div>
               </div>
 
-              {/* Professional Roles Grid */}
+              {/* Academic & Learning Journey */}
               <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                 <motion.div
                   variants={itemVariants}
@@ -168,21 +166,21 @@ export default function OverviewSection() {
                 >
                   <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
                     <div className="p-2 md:p-3 bg-blue-500 rounded-lg md:rounded-xl shadow-lg">
-                      <Icon icon="solar:code-bold" className="text-white w-5 md:w-6 h-5 md:h-6" width={24} height={24} />
+                      <Icon icon="solar:book-bold" className="text-white w-5 md:w-6 h-5 md:h-6" width={24} height={24} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white text-base md:text-lg">Software Developer</h4>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium text-sm md:text-base">Upwork Freelancer</p>
-                      <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">2020 — Present</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white text-base md:text-lg">B.Tech CSE Student</h4>
+                      <p className="text-blue-600 dark:text-blue-400 font-medium text-sm md:text-base">2nd Year</p>
+                      <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">2023 — 2027</p>
                     </div>
                   </div>
                   <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed mb-2 md:mb-3 flex-1">
-                    Delivering high-quality projects across diverse domains, specializing in web applications,
-                    API development, and cloud integrations.
+                    Currently studying core computer science subjects including Data Structures, Algorithms,
+                    Object-Oriented Programming, and Database Management Systems.
                   </p>
                   <div className="flex items-center gap-2 text-xs md:text-sm mt-auto">
                     <Icon icon="solar:star-bold" className="text-yellow-500 w-3 md:w-4 h-3 md:h-4" width={16} height={16} />
-                    <span className="font-semibold text-green-600 dark:text-green-400">Top Rated • 91% Success Score</span>
+                    <span className="font-semibold text-green-600 dark:text-green-400">Active Learner</span>
                   </div>
                 </motion.div>
 
@@ -193,21 +191,21 @@ export default function OverviewSection() {
                 >
                   <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
                     <div className="p-2 md:p-3 bg-green-500 rounded-lg md:rounded-xl shadow-lg">
-                      <Icon icon="solar:hospital-bold" className="text-white w-5 md:w-6 h-5 md:h-6" width={24} height={24} />
+                      <Icon icon="solar:code-bold" className="text-white w-5 md:w-6 h-5 md:h-6" width={24} height={24} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white text-base md:text-lg">HIMS Master Trainer</h4>
-                      <p className="text-green-600 dark:text-green-400 font-medium text-sm md:text-base">Public Health Organization</p>
-                      <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">2019 — Present</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white text-base md:text-lg">Web Developer</h4>
+                      <p className="text-green-600 dark:text-green-400 font-medium text-sm md:text-base">Self-taught</p>
+                      <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">2022 — Present</p>
                     </div>
                   </div>
                   <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed mb-2 md:mb-3 flex-1">
-                    Leading digital transformation in healthcare, integrating 45+ radiology machines and
-                    training teams on modern HIMS and PACS systems.
+                    Building modern web applications using React, Node.js, and various other technologies.
+                    Passionate about creating user-friendly and responsive interfaces.
                   </p>
                   <div className="flex items-center gap-2 text-xs md:text-sm mt-auto">
                     <Icon icon="solar:shield-check-bold" className="text-blue-500 w-3 md:w-4 h-3 md:h-4" width={16} height={16} />
-                    <span className="font-semibold text-blue-600 dark:text-blue-400">Healthcare IT Specialist</span>
+                    <span className="font-semibold text-blue-600 dark:text-blue-400">Full Stack Enthusiast</span>
                   </div>
                 </motion.div>
               </div>
@@ -224,7 +222,7 @@ export default function OverviewSection() {
               </h4>
               <div className="space-y-3">
                 <motion.a
-                  href="mailto:mramazan1@yahoo.com"
+                  href="mailto:abhishek@example.com"
                   whileHover={{ scale: 1.02, x: 4 }}
                   whileTap={{ scale: 0.98 }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-white/70 dark:bg-gray-800/30 hover:bg-white/90 dark:hover:bg-gray-800/50 transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
@@ -233,7 +231,7 @@ export default function OverviewSection() {
                     <Icon icon="solar:letter-bold" className="text-white w-4 h-4" width={16} height={16} />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-gray-900 dark:text-white break-all">mramazan1@yahoo.com</div>
+                    <div className="text-sm font-bold text-gray-900 dark:text-white break-all">abhishek@example.com</div>
                   </div>
                 </motion.a>
 
@@ -245,7 +243,7 @@ export default function OverviewSection() {
                     <Icon icon="solar:global-bold" className="text-white w-4 h-4" width={16} height={16} />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-gray-900 dark:text-white">mramazan.dev</div>
+                    <div className="text-sm font-bold text-gray-900 dark:text-white">abhishekgupta.dev</div>
                   </div>
                 </motion.div>
 
@@ -257,7 +255,7 @@ export default function OverviewSection() {
                     <Icon icon="solar:map-point-bold" className="text-white w-4 h-4" width={16} height={16} />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-gray-900 dark:text-white">Islamabad, Pakistan</div>
+                    <div className="text-sm font-bold text-gray-900 dark:text-white">India</div>
                   </div>
                 </motion.div>
               </div>
@@ -271,9 +269,9 @@ export default function OverviewSection() {
               </h4>
               <div className="space-y-4">
                 {[
-                  { icon: "solar:star-bold", text: "Top Rated on Upwork", color: "text-yellow-600" },
-                  { icon: "solar:cpu-bolt-bold-duotone", text: "Expert in AI Integration", color: "text-blue-600" },
-                  { icon: "solar:code-square-bold", text: "50+ Projects Delivered", color: "text-green-600" },
+                  { icon: "solar:star-bold", text: "Dean's List Student", color: "text-yellow-600" },
+                  { icon: "solar:code-square-bold", text: "10+ Projects Completed", color: "text-green-600" },
+                  { icon: "solar:users-group-rounded-bold", text: "Active in Tech Communities", color: "text-blue-600" },
                 ].map((achievement, index) => (
                   <motion.div
                     key={index}
@@ -289,11 +287,11 @@ export default function OverviewSection() {
               </div>
             </div>
 
-            {/* Available for Hire */}
+            {/* Available for Opportunities */}
             <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-50/90 to-cyan-50/90 dark:from-emerald-950/30 dark:to-cyan-950/30 backdrop-blur-sm border border-white/30 dark:border-gray-700/40 shadow-xl">
               <h4 className="font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                 <Icon icon="solar:rocket-bold" className="text-emerald-600 w-5 h-5" width={20} height={20} />
-                Available for Hire
+                Open to Opportunities
               </h4>
               <div className="space-y-3.5">
                 <motion.div
@@ -303,7 +301,7 @@ export default function OverviewSection() {
                   className="flex items-center gap-3 p-3 rounded-lg bg-green-100/70 dark:bg-gray-800/30  transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
                 >
                   <Icon icon="solar:check-circle-bold" className="text-green-600 w-5 h-5" width={20} height={20} />
-                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">Open to New Opportunities</span>
+                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">Internship Opportunities</span>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -311,8 +309,8 @@ export default function OverviewSection() {
                   transition={{ delay: 2.2 }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-green-100/70 dark:bg-gray-800/30  transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
                 >
-                  <Icon icon="solar:planet-2-bold" className="text-cyan-600 w-5 h-5" width={20} height={20} />
-                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">Open to Relocation</span>
+                  <Icon icon="solar:users-group-rounded-bold" className="text-cyan-600 w-5 h-5" width={20} height={20} />
+                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">Collaborative Projects</span>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -320,8 +318,8 @@ export default function OverviewSection() {
                   transition={{ delay: 2.4 }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-green-100/70 dark:bg-gray-800/30  transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
                 >
-                  <Icon icon="solar:clock-circle-bold" className="text-blue-600 w-5 h-5" width={20} height={20} />
-                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">Remote & On-site Available</span>
+                  <Icon icon="solar:book-bold" className="text-blue-600 w-5 h-5" width={20} height={20} />
+                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">Learning & Mentorship</span>
                 </motion.div>
               </div>
             </div>
@@ -330,4 +328,4 @@ export default function OverviewSection() {
       </motion.div>
     </motion.section>
   );
-} 
+}

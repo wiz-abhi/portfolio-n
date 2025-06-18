@@ -46,7 +46,7 @@ export default function HeroSection() {
           transition={{ delay: 0.2, duration: 0.6 }}
         >
           <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent z-10">
-            Muhammad Ramazan
+            Abhishek Gupta
           </span>
         </motion.h1>
 
@@ -60,10 +60,10 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          Crafting exceptional digital experiences with clean code and thoughtful design
+          Building innovative solutions through code and creativity
         </motion.p>
 
-        {/* Social Links - keeping exactly the same */}
+        {/* Social Links */}
         <motion.div
           className="flex flex-wrap gap-3 justify-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -71,9 +71,9 @@ export default function HeroSection() {
           transition={{ delay: 1.0 }}
         >
           {[
-            { href: "https://github.com/lightify97", icon: "simple-icons:github", label: "GitHub", color: "hover:text-gray-900 dark:hover:text-white" },
-            { href: "https://linkedin.com/in/m-ramazan", icon: "skill-icons:linkedin", label: "LinkedIn", color: "hover:text-blue-600" },
-            { href: "mailto:lightify6@gmail.com", icon: "material-icon-theme:email", label: "Email", color: "hover:text-green-600" }
+            { href: "https://github.com/abhishekgupta", icon: "simple-icons:github", label: "GitHub", color: "hover:text-gray-900 dark:hover:text-white" },
+            { href: "https://linkedin.com/in/abhishek-gupta", icon: "skill-icons:linkedin", label: "LinkedIn", color: "hover:text-blue-600" },
+            { href: "mailto:abhishek@example.com", icon: "material-icon-theme:email", label: "Email", color: "hover:text-green-600" }
           ].map((link) => (
             <motion.div key={link.label} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -86,34 +86,6 @@ export default function HeroSection() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Skills Preview */}
-        {/* <motion.div
-          className="flex flex-wrap justify-center gap-3 mb-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
-        >
-          {[
-            { icon: "skill-icons:react-dark", label: "React" },
-            { icon: "skill-icons:typescript", label: "TypeScript" },
-            { icon: "skill-icons:nextjs-dark", label: "Next.js" },
-            { icon: "skill-icons:nodejs-dark", label: "Node.js" },
-            { icon: "skill-icons:tailwindcss-dark", label: "Tailwind" }
-          ].map((skill, index) => (
-            <motion.div
-              key={skill.label}
-              className="flex items-center gap-2 px-3 py-2 bg-gray-50/80 dark:bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-200/50 dark:border-gray-700/30"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2 + index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -2 }}
-            >
-              <Icon icon={skill.icon} width={16} height={16} />
-              <span className="text-sm text-gray-700 dark:text-gray-300">{skill.label}</span>
-            </motion.div>
-          ))}
-        </motion.div> */}
 
         {/* Status */}
         <motion.div
@@ -129,7 +101,7 @@ export default function HeroSection() {
           />
           <Link href="#contact">
             <span className="text-green-700 dark:text-green-300 text-sm font-medium">
-              Available for projects
+              Open to opportunities
             </span>
           </Link>
         </motion.div>
@@ -174,4 +146,4 @@ export default function HeroSection() {
       </motion.div>
     </div>
   );
-} 
+}
