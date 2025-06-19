@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { personalInfo } from "@/config/portfolio-data";
 import SectionHeader from './SectionHeader';
 
 export default function ContactSection() {
@@ -43,7 +44,7 @@ export default function ContactSection() {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_email: 'abhishek@example.com', // Your email
+          to_email: personalInfo.contact.email,
         },
         publicKey
       );
@@ -221,7 +222,7 @@ export default function ContactSection() {
                     <span className="font-medium">Failed to send message</span>
                   </div>
                   <p className="text-red-600 text-left dark:text-red-500 text-sm mt-1">
-                    Please try again or contact me directly at abhishek@example.com
+                    Please try again or contact me directly at {personalInfo.contact.email}
                   </p>
                   <button
                     onClick={() => setSubmitStatus('idle')}
@@ -247,7 +248,7 @@ export default function ContactSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="mailto:abhishek@example.com"
+                href={`mailto:${personalInfo.contact.email}`}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 border-2 border-gray-300 hover:border-gray-400 dark:border-gray-600 dark:hover:border-gray-500 rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <Icon icon="solar:mailbox-bold-duotone" width={18} height={18} />

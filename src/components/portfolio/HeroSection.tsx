@@ -3,6 +3,7 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { personalInfo } from "@/config/portfolio-data";
 import TypewriterRole from "./TypewriterRole";
 
 export default function HeroSection() {
@@ -46,7 +47,7 @@ export default function HeroSection() {
           transition={{ delay: 0.2, duration: 0.6 }}
         >
           <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent z-10">
-            Abhishek Gupta
+            {personalInfo.name}
           </span>
         </motion.h1>
 
@@ -60,7 +61,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          Building innovative solutions through code and creativity
+          {personalInfo.tagline}
         </motion.p>
 
         {/* Social Links */}
@@ -71,9 +72,9 @@ export default function HeroSection() {
           transition={{ delay: 1.0 }}
         >
           {[
-            { href: "https://github.com/abhishekgupta", icon: "simple-icons:github", label: "GitHub", color: "hover:text-gray-900 dark:hover:text-white" },
-            { href: "https://linkedin.com/in/abhishek-gupta", icon: "skill-icons:linkedin", label: "LinkedIn", color: "hover:text-blue-600" },
-            { href: "mailto:abhishek@example.com", icon: "material-icon-theme:email", label: "Email", color: "hover:text-green-600" }
+            { href: personalInfo.social.github, icon: "simple-icons:github", label: "GitHub", color: "hover:text-gray-900 dark:hover:text-white" },
+            { href: personalInfo.social.linkedin, icon: "skill-icons:linkedin", label: "LinkedIn", color: "hover:text-blue-600" },
+            { href: `mailto:${personalInfo.contact.email}`, icon: "material-icon-theme:email", label: "Email", color: "hover:text-green-600" }
           ].map((link) => (
             <motion.div key={link.label} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -101,7 +102,7 @@ export default function HeroSection() {
           />
           <Link href="#contact">
             <span className="text-green-700 dark:text-green-300 text-sm font-medium">
-              Open to opportunities
+              {personalInfo.status.message}
             </span>
           </Link>
         </motion.div>

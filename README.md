@@ -1,4 +1,4 @@
-# 🚀 Muhammad Ramazan - Portfolio
+# 🚀 Abhishek Gupta - Portfolio
 
 A stunning, modern portfolio website built with cutting-edge technologies and beautiful animations inspired by Aceternity UI design principles.
 
@@ -59,8 +59,14 @@ A stunning, modern portfolio website built with cutting-edge technologies and be
 
 ### **Icons & Assets**
 
-- **Iconifyt** - Beautiful, customizable icons
+- **Iconify** - Beautiful, customizable icons
 - **Google Fonts (Space Grotesk)** - Modern typography
+
+### **Analytics & Monitoring**
+
+- **PostHog** - Privacy-friendly analytics and user behavior tracking
+- **Performance Monitoring** - Real-time performance insights
+- **Error Tracking** - Automatic exception capture
 
 ### **Development Tools**
 
@@ -80,7 +86,7 @@ A stunning, modern portfolio website built with cutting-edge technologies and be
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/lightify97/portfolio.git
+   git clone https://github.com/abhishekgupta/portfolio.git
    cd portfolio
    ```
 
@@ -92,7 +98,17 @@ A stunning, modern portfolio website built with cutting-edge technologies and be
    yarn install
    ```
 
-3. **Run the development server**
+3. **Set up environment variables**
+
+   ```bash
+   cp env-example .env
+   ```
+
+   Update the `.env` file with your actual values:
+   - EmailJS credentials for contact form
+   - PostHog analytics keys
+
+4. **Run the development server**
 
    ```bash
    npm run dev
@@ -100,7 +116,7 @@ A stunning, modern portfolio website built with cutting-edge technologies and be
    yarn dev
    ```
 
-4. **Open your browser**
+5. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ### Build for Production
@@ -110,56 +126,59 @@ npm run build
 npm start
 ```
 
-## 🎨 Customization
+## 🎨 Easy Customization
+
+### **Quick Configuration**
+
+All portfolio content can be easily updated through the configuration file:
+
+**`src/config/portfolio-data.ts`** - Update this single file to change:
+
+- Personal information (name, contact, social links)
+- Projects (add/remove/modify projects)
+- Certifications (add your certificates)
+- Technology stack (skills and experience levels)
+- Experience timeline
+- About section content
 
 ### **Personal Information**
 
-Update the following in `src/app/page.tsx`:
-
-- Name and title in the navigation and hero section
-- Contact information (email, phone, location)
-- Social media links (GitHub, LinkedIn, etc.)
-- About me description and background
+```typescript
+export const personalInfo = {
+  name: "Your Name",
+  title: "Your Title",
+  email: "your.email@example.com",
+  // ... more fields
+};
+```
 
 ### **Projects**
 
-Modify the `projects` array in `src/components/portfolio/ProjectsSection.tsx`:
-
 ```typescript
-{
-  title: "Your Project Title",
-  description: "Project description...",
-  image: "🎯", // Emoji or image URL
-  tech: ["React", "Node.js", "MongoDB"],
-  github: "https://github.com/username/repo",
-  live: "https://yourproject.com",
-  color: "from-blue-500 to-purple-500"
-}
+export const projects = [
+  {
+    title: "Your Project Title",
+    description: "Project description...",
+    tech: ["React", "Node.js", "MongoDB"],
+    github: "https://github.com/username/repo",
+    live: "https://yourproject.com",
+    // ... more fields
+  }
+];
 ```
 
-### **Skills**
-
-Update skills in the skills section of `src/components/portfolio/TechStackSection.tsx`:
+### **Certifications**
 
 ```typescript
-{
-  category: "Frontend",
-  skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"]
-}
-```
-
-### **Experience**
-
-Modify the experience array in `src/components/portfolio/ExperienceSection.tsx`:
-
-```typescript
-{
-  role: "Your Role",
-  company: "Company Name",
-  period: "2023 - Present",
-  description: "Role description...",
-  achievements: ["Achievement 1", "Achievement 2"]
-}
+export const certifications = [
+  {
+    title: "Your Certification",
+    provider: "Provider Name",
+    issued: "Date",
+    skills: ["Skill 1", "Skill 2"],
+    // ... more fields
+  }
+];
 ```
 
 ### **Styling**
@@ -167,6 +186,20 @@ Modify the experience array in `src/components/portfolio/ExperienceSection.tsx`:
 - **Colors**: Update color schemes in `tailwind.config.js`
 - **Animations**: Customize animations in `src/app/globals.css`
 - **Components**: Modify components in the `src/components/` directory
+
+## 📊 Analytics with PostHog
+
+This portfolio includes PostHog analytics for tracking:
+
+- **Page Views**: Monitor visitor traffic
+- **User Interactions**: Track how users engage with your portfolio
+- **Performance Metrics**: Monitor loading times and user experience
+- **Error Tracking**: Automatically capture and track errors
+
+### Benefits:
+- **Privacy-Friendly**: First-party data collection
+- **GDPR Compliant**: Respects user privacy
+- **Real-time Insights**: Live data about your portfolio performance
 
 ## 📂 Project Structure
 
@@ -177,55 +210,35 @@ portfolio/
 │   │   ├── globals.css         # Global styles and animations
 │   │   ├── layout.tsx          # Root layout with metadata
 │   │   ├── page.tsx            # Main portfolio page
-│   │   ├── favicon.ico         # Site favicon
-│   │   └── favicon.png         # PNG favicon
+│   │   └── favicon.ico         # Site favicon
 │   ├── components/
 │   │   ├── portfolio/          # Portfolio-specific components
-│   │   │   ├── AboutSection.tsx
-│   │   │   ├── Background.tsx
-│   │   │   ├── CertificationsSection.tsx
-│   │   │   ├── ContactSection.tsx
-│   │   │   ├── ExperienceSection.tsx
-│   │   │   ├── Footer.tsx
 │   │   │   ├── HeroSection.tsx
-│   │   │   ├── Navigation.tsx
-│   │   │   ├── OverviewSection.tsx
 │   │   │   ├── ProjectsSection.tsx
-│   │   │   ├── SectionHeader.tsx
-│   │   │   ├── TechStackSection.tsx
-│   │   │   ├── TestimonialsSection.tsx
-│   │   │   ├── TypewriterRole.tsx
-│   │   │   └── index.ts        # Component exports
-│   │   ├── AnimatedBackground.tsx
+│   │   │   ├── ContactSection.tsx
+│   │   │   └── ... (other sections)
 │   │   ├── PostHogProvider.tsx # Analytics provider
-│   │   ├── SocketioIcon.tsx
 │   │   ├── ThemeProvider.tsx   # Theme context provider
 │   │   └── ThemeToggle.tsx     # Dark/light theme toggle
-├── lib/
-│   ├── posthog.ts             # PostHog analytics configuration
-│   └── utils.ts               # Utility functions
+│   ├── config/
+│   │   └── portfolio-data.ts   # 🎯 MAIN CONFIG FILE
+│   └── lib/
+│       ├── posthog.ts         # PostHog configuration
+│       └── utils.ts           # Utility functions
 ├── public/
 │   ├── certificates/          # Certificate images
 │   ├── CV.pdf                # Resume/CV file
-│   ├── globe.svg             # SVG icons
-│   ├── next.svg
-│   ├── vercel.svg
-│   ├── window.svg
-│   └── file.svg
+│   └── ... (other assets)
 ├── .env                      # Environment variables
-├── .gitignore               # Git ignore rules
-├── eslint.config.mjs        # ESLint configuration
-├── next.config.ts           # Next.js configuration
-├── next-env.d.ts           # Next.js TypeScript declarations
-├── package.json            # Dependencies and scripts
-├── package-lock.json       # Locked dependency versions
-├── postcss.config.mjs      # PostCSS configuration
-├── tailwind.config.js      # Tailwind CSS configuration
-├── tsconfig.json          # TypeScript configuration
-└── README.md              # This file
+└── ... (config files)
 ```
 
-=
+## 🔧 Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
 ## 📱 Browser Support
 
@@ -235,29 +248,22 @@ portfolio/
 - ✅ Edge (Latest)
 - ✅ Mobile browsers
 
-## 🔧 Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/lightify97/portfolio/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/abhishekgupta/portfolio/issues).
 
 ## 👨‍💻 Author
 
-**Muhammad Ramazan**
+**Abhishek Gupta**
 
-- Portfolio: [https://mramazan.dev](https://mramazan.dev)
-- GitHub: [@lightify97](https://github.com/lightify97)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/m-ramazan)
-- Email: mramazan1@yahoo.com
+- Portfolio: [https://abhishekgupta.dev](https://abhishekgupta.dev)
+- GitHub: [@abhishekgupta](https://github.com/abhishekgupta)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/abhishek-gupta)
+- Email: abhishek@example.com
 
 ## 🙏 Acknowledgments
 
@@ -265,6 +271,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 - **Tailwind CSS** - Utility-first CSS framework
 - **Next.js Team** - Excellent React framework
 - **Iconify** - Beautiful icon library
+- **PostHog** - Privacy-friendly analytics platform
 
 ---
 

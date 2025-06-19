@@ -2,6 +2,7 @@
 
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { personalInfo } from "@/config/portfolio-data";
 import SectionHeader from "./SectionHeader";
 
 export default function OverviewSection() {
@@ -109,26 +110,20 @@ export default function OverviewSection() {
                   <div>
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-gray-900 dark:text-white flex items-center gap-2 md:gap-3">
                       <span className="text-2xl sm:text-3xl md:text-4xl">👋</span>
-                      Hello, I&apos;m Abhishek Gupta
+                      Hello, I&apos;m {personalInfo.name}
                     </h3>
                     <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-4 md:mb-6">
-                      A passionate <span className="font-bold text-blue-600 dark:text-blue-400">B.Tech Computer Science</span> student in my
-                      <span className="font-bold text-purple-600 dark:text-purple-400">
-                        &nbsp; 2nd year</span>, dedicated to learning and building innovative solutions through code.
+                      {personalInfo.about.introduction}
                     </p>
                   </div>
 
                   {/* Expanded About Content */}
                   <div className="space-y-3 md:space-y-4 border-t border-gray-200/50 dark:border-gray-700/50 pt-4 md:pt-6">
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                      I'm currently pursuing my Bachelor's in Computer Science Engineering, where I'm developing strong foundations
-                      in programming, data structures, algorithms, and software development. I love working on projects that
-                      challenge me to learn new technologies and solve real-world problems.
+                      {personalInfo.about.description}
                     </p>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                      When I'm not coding, you'll find me exploring new frameworks, contributing to open-source projects,
-                      or participating in coding competitions. I believe in continuous learning and staying updated with
-                      the latest trends in technology.
+                      {personalInfo.about.interests}
                     </p>
                   </div>
 
@@ -139,7 +134,7 @@ export default function OverviewSection() {
                       Core Technologies
                     </h4>
                     <div className="flex flex-wrap gap-2 md:gap-3">
-                      {["JavaScript", "React", "Node.js", "Python", "Java", "HTML/CSS", "Git", "MongoDB", "Express.js"].map((skill, index) => (
+                      {personalInfo.about.coreSkills.map((skill, index) => (
                         <motion.span
                           key={skill}
                           initial={{ opacity: 0, scale: 0 }}
@@ -169,9 +164,9 @@ export default function OverviewSection() {
                       <Icon icon="solar:book-bold" className="text-white w-5 md:w-6 h-5 md:h-6" width={24} height={24} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white text-base md:text-lg">B.Tech CSE Student</h4>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium text-sm md:text-base">2nd Year</p>
-                      <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">2023 — 2027</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white text-base md:text-lg">{personalInfo.about.academic.degree}</h4>
+                      <p className="text-blue-600 dark:text-blue-400 font-medium text-sm md:text-base">{personalInfo.about.academic.year}</p>
+                      <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">{personalInfo.about.academic.duration}</p>
                     </div>
                   </div>
                   <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed mb-2 md:mb-3 flex-1">
@@ -180,7 +175,7 @@ export default function OverviewSection() {
                   </p>
                   <div className="flex items-center gap-2 text-xs md:text-sm mt-auto">
                     <Icon icon="solar:star-bold" className="text-yellow-500 w-3 md:w-4 h-3 md:h-4" width={16} height={16} />
-                    <span className="font-semibold text-green-600 dark:text-green-400">Active Learner</span>
+                    <span className="font-semibold text-green-600 dark:text-green-400">{personalInfo.about.academic.status}</span>
                   </div>
                 </motion.div>
 
@@ -222,7 +217,7 @@ export default function OverviewSection() {
               </h4>
               <div className="space-y-3">
                 <motion.a
-                  href="mailto:abhishek@example.com"
+                  href={`mailto:${personalInfo.contact.email}`}
                   whileHover={{ scale: 1.02, x: 4 }}
                   whileTap={{ scale: 0.98 }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-white/70 dark:bg-gray-800/30 hover:bg-white/90 dark:hover:bg-gray-800/50 transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
@@ -231,7 +226,7 @@ export default function OverviewSection() {
                     <Icon icon="solar:letter-bold" className="text-white w-4 h-4" width={16} height={16} />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-gray-900 dark:text-white break-all">abhishek@example.com</div>
+                    <div className="text-sm font-bold text-gray-900 dark:text-white break-all">{personalInfo.contact.email}</div>
                   </div>
                 </motion.a>
 
@@ -243,7 +238,7 @@ export default function OverviewSection() {
                     <Icon icon="solar:global-bold" className="text-white w-4 h-4" width={16} height={16} />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-gray-900 dark:text-white">abhishekgupta.dev</div>
+                    <div className="text-sm font-bold text-gray-900 dark:text-white">{personalInfo.contact.website}</div>
                   </div>
                 </motion.div>
 
@@ -255,7 +250,7 @@ export default function OverviewSection() {
                     <Icon icon="solar:map-point-bold" className="text-white w-4 h-4" width={16} height={16} />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-gray-900 dark:text-white">India</div>
+                    <div className="text-sm font-bold text-gray-900 dark:text-white">{personalInfo.contact.location}</div>
                   </div>
                 </motion.div>
               </div>

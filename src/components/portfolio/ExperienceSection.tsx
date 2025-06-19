@@ -2,42 +2,8 @@
 
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { experience } from "@/config/portfolio-data";
 import SectionHeader from "./SectionHeader";
-
-const experience = [
-  {
-    role: "Computer Science Student",
-    company: "University/College Name",
-    period: "August 2023 — Present",
-    type: "Academic",
-    companyIcon: "solar:book-bold",
-    companyColor: "from-blue-500 to-blue-600",
-    description: "Pursuing Bachelor of Technology in Computer Science Engineering with focus on software development, data structures, algorithms, and modern programming paradigms.",
-    achievements: [
-      "Maintaining excellent academic performance with consistent high grades",
-      "Actively participating in coding competitions and hackathons",
-      "Leading study groups and peer programming sessions",
-      "Contributing to college tech events and workshops"
-    ],
-    technologies: ["Java", "Python", "C++", "Data Structures", "Algorithms", "Object-Oriented Programming", "Database Management"]
-  },
-  {
-    role: "Web Development Enthusiast",
-    company: "Self-Learning & Projects",
-    period: "January 2022 — Present",
-    type: "Self-taught",
-    companyColor: "from-green-500 to-green-600",
-    companyIcon: "solar:code-bold",
-    description: "Self-taught web developer passionate about creating modern, responsive web applications using cutting-edge technologies and best practices.",
-    achievements: [
-      "Built 10+ personal projects showcasing various web technologies",
-      "Learned and implemented modern JavaScript frameworks",
-      "Developed full-stack applications with database integration",
-      "Contributed to open-source projects on GitHub"
-    ],
-    technologies: ["JavaScript", "React", "Node.js", "Express", "MongoDB", "HTML5", "CSS3", "Git", "Responsive Design"]
-  }
-];
 
 export default function ExperienceSection() {
   const containerVariants = {

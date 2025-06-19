@@ -3,6 +3,7 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { techStack } from "@/config/portfolio-data";
 import SectionHeader from "./SectionHeader";
 
 interface TechItem {
@@ -14,161 +15,14 @@ interface TechItem {
   yearsUsed?: number;
 }
 
-const techStackData: Record<string, TechItem[]> = {
-  "Frontend": [
-    {
-      name: "React",
-      icon: "skill-icons:react-dark",
-      level: "Intermediate",
-      category: "Frontend",
-      description: "Building modern, interactive user interfaces",
-      yearsUsed: 2
-    },
-    {
-      name: "JavaScript",
-      icon: "devicon:javascript",
-      level: "Intermediate",
-      category: "Frontend",
-      description: "Core language for web development",
-      yearsUsed: 2
-    },
-    {
-      name: "HTML5",
-      icon: "devicon:html5",
-      level: "Expert",
-      category: "Frontend",
-      description: "Semantic markup and modern web standards",
-      yearsUsed: 3
-    },
-    {
-      name: "CSS3",
-      icon: "devicon:css3",
-      level: "Expert",
-      category: "Frontend",
-      description: "Styling and responsive design",
-      yearsUsed: 3
-    },
-    {
-      name: "Tailwind CSS",
-      icon: "logos:tailwindcss-icon",
-      level: "Intermediate",
-      category: "Frontend",
-      description: "Utility-first CSS framework for rapid UI development",
-      yearsUsed: 1
-    },
-    {
-      name: "TypeScript",
-      icon: "devicon:typescript",
-      level: "Beginner",
-      category: "Frontend",
-      description: "Type-safe JavaScript for scalable applications",
-      yearsUsed: 1
-    },
-  ],
-  "Backend": [
-    {
-      name: "Node.js",
-      icon: "devicon:nodejs",
-      level: "Intermediate",
-      category: "Backend",
-      description: "JavaScript runtime for server-side applications",
-      yearsUsed: 2
-    },
-    {
-      name: "Express",
-      icon: "skill-icons:expressjs-dark",
-      level: "Intermediate",
-      category: "Backend",
-      description: "Fast, minimalist web framework for Node.js",
-      yearsUsed: 1
-    },
-    {
-      name: "Python",
-      icon: "devicon:python",
-      level: "Intermediate",
-      category: "Backend",
-      description: "Versatile language for backend and data science",
-      yearsUsed: 2
-    },
-    {
-      name: "Java",
-      icon: "devicon:java",
-      level: "Intermediate",
-      category: "Backend",
-      description: "Object-oriented programming and enterprise applications",
-      yearsUsed: 2
-    },
-  ],
-  "Database": [
-    {
-      name: "MongoDB",
-      icon: "devicon:mongodb",
-      level: "Intermediate",
-      category: "Database",
-      description: "NoSQL document database",
-      yearsUsed: 1
-    },
-    {
-      name: "MySQL",
-      icon: "logos:mysql",
-      level: "Beginner",
-      category: "Database",
-      description: "Popular open-source relational database",
-      yearsUsed: 1
-    },
-    {
-      name: "Firebase",
-      icon: "vscode-icons:file-type-firebase",
-      level: "Intermediate",
-      category: "Database",
-      description: "Google's app development platform",
-      yearsUsed: 1
-    },
-  ],
-  "Tools & Others": [
-    {
-      name: "Git",
-      icon: "devicon:git",
-      level: "Intermediate",
-      category: "Tools & Others",
-      description: "Version control system",
-      yearsUsed: 2
-    },
-    {
-      name: "GitHub",
-      icon: "skill-icons:github-dark",
-      level: "Intermediate",
-      category: "Tools & Others",
-      description: "Code hosting and collaboration platform",
-      yearsUsed: 2
-    },
-    {
-      name: "VS Code",
-      icon: "devicon:vscode",
-      level: "Expert",
-      category: "Tools & Others",
-      description: "Code editor and development environment",
-      yearsUsed: 3
-    },
-    {
-      name: "Figma",
-      icon: "devicon:figma",
-      level: "Beginner",
-      category: "Tools & Others",
-      description: "UI/UX design and prototyping tool",
-      yearsUsed: 1
-    },
-  ],
-};
-
 export default function TechStackSection() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
-  const categories = ["All", ...Object.keys(techStackData)];
+  const categories = ["All", ...Object.keys(techStack)];
 
   const filteredTech = activeCategory === "All"
-    ? Object.values(techStackData).flat()
-    : techStackData[activeCategory] || [];
+    ? Object.values(techStack).flat()
+    : techStack[activeCategory] || [];
 
   return (
     <motion.section
@@ -209,7 +63,7 @@ export default function TechStackSection() {
       {activeCategory === "All" ? (
         // Categorized view
         <div className="space-y-8">
-          {Object.entries(techStackData).map(([categoryName, techs]) => (
+          {Object.entries(techStack).map(([categoryName, techs]) => (
             <motion.div
               key={categoryName}
               initial={{ opacity: 0, y: 20 }}
