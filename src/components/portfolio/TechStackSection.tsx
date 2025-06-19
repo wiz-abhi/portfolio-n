@@ -20,9 +20,10 @@ export default function TechStackSection() {
 
   const categories = ["All", ...Object.keys(techStack)];
 
-  const filteredTech = activeCategory === "All"
+const filteredTech =
+  activeCategory === "All"
     ? Object.values(techStack).flat()
-    : techStack[activeCategory] || [];
+    : techStack[activeCategory as keyof typeof techStack] || [];
 
   return (
     <motion.section
