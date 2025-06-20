@@ -421,9 +421,9 @@ export const techStack = {
 // Experience Configuration
 export const experience = [
   {
-    role: "Computer Science Student",
-    company: "University/College Name", // Update with your college name
-    period: "August 2023 — Present",
+    role: "Computer Science(AI) Student",
+    company: "Galgotias College of Engg and Technology", // Update with your college name
+    period: "September 2023 — Present",
     type: "Academic",
     companyIcon: "solar:book-bold",
     companyColor: "from-blue-500 to-blue-600",
