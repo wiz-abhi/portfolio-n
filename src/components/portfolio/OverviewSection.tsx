@@ -49,7 +49,7 @@ export default function OverviewSection() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}
-      viewport={{ once: true }}
+      viewport={{ once: false, amount: 0.1 }}
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -76,7 +76,7 @@ export default function OverviewSection() {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: false, amount: 0.1 }}
         className="relative z-10"
       >
         {/* Section Header */}
@@ -138,8 +138,9 @@ export default function OverviewSection() {
                         <motion.span
                           key={skill}
                           initial={{ opacity: 0, scale: 0 }}
-                          animate={{ opacity: 1, scale: 1 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 1.2 + index * 0.1 }}
+                          viewport={{ once: false }}
                           whileHover={{ scale: 1.05, y: -1 }}
                           whileTap={{ scale: 0.95 }}
                           className="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 text-gray-800 dark:text-gray-200 rounded-lg md:rounded-xl border border-blue-200/50 dark:border-blue-800/30 hover:shadow-lg transition-all duration-300"
@@ -271,8 +272,9 @@ export default function OverviewSection() {
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 1.5 + index * 0.2 }}
+                    viewport={{ once: false }}
                     className="flex items-center gap-3 p-3 rounded-lg bg-amber-100/70 dark:bg-gray-800/30  transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
                   >
                     <Icon icon={achievement.icon} className={`${achievement.color} w-5 h-5`} width={20} height={20} />
@@ -291,8 +293,9 @@ export default function OverviewSection() {
               <div className="space-y-3.5">
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 2.0 }}
+                  viewport={{ once: false }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-green-100/70 dark:bg-gray-800/30  transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
                 >
                   <Icon icon="solar:check-circle-bold" className="text-green-600 w-5 h-5" width={20} height={20} />
@@ -300,8 +303,9 @@ export default function OverviewSection() {
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 2.2 }}
+                  viewport={{ once: false }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-green-100/70 dark:bg-gray-800/30  transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
                 >
                   <Icon icon="solar:users-group-rounded-bold" className="text-cyan-600 w-5 h-5" width={20} height={20} />
@@ -309,8 +313,9 @@ export default function OverviewSection() {
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 2.4 }}
+                  viewport={{ once: false }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-green-100/70 dark:bg-gray-800/30  transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
                 >
                   <Icon icon="solar:book-bold" className="text-blue-600 w-5 h-5" width={20} height={20} />

@@ -49,7 +49,7 @@ export default function ProjectsSection() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}
-      viewport={{ once: true }}
+      viewport={{ once: false, amount: 0.1 }}
       className="mb-16 md:mb-24 lg:mb-32 relative overflow-hidden"
     >
       {/* Enhanced Background Elements */}
@@ -77,7 +77,7 @@ export default function ProjectsSection() {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: false, amount: 0.1 }}
         className="relative z-10"
       >
         {/* Section Header */}
@@ -234,6 +234,7 @@ export default function ProjectsSection() {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ delay: featureIndex * 0.1 }}
+                            viewport={{ once: false }}
                             className="flex items-start gap-2.5 md:gap-3 text-gray-700 dark:text-gray-300"
                           >
                             <Icon
@@ -261,6 +262,7 @@ export default function ProjectsSection() {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ delay: deliverableIndex * 0.1 }}
+                            viewport={{ once: false }}
                             className="flex items-start gap-2.5 md:gap-3 text-gray-700 dark:text-gray-300"
                           >
                             <Icon
@@ -289,6 +291,7 @@ export default function ProjectsSection() {
                           initial={{ opacity: 0, scale: 0 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ delay: techIndex * 0.05 }}
+                          viewport={{ once: false }}
                           whileHover={{ scale: 1.05, y: -2 }}
                           className="px-2.5 py-1.5 md:px-4 md:py-2 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 text-gray-700 dark:text-gray-300 rounded-lg md:rounded-xl text-xs md:text-sm font-medium border border-gray-200 dark:border-gray-600 hover:shadow-md md:hover:shadow-lg transition-all duration-200"
                         >
