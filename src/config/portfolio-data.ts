@@ -10,18 +10,18 @@ export const personalInfo = {
   
   // Contact Information
   contact: {
-    email: "abhishek@example.com",
-    website: "abhishekgupta.dev",
+    email: "abhishekg8318@gmail.com",
+    website: "abhiishekk.vercel.app",
     location: "India",
-    phone: "+91 XXXXX XXXXX", // Optional
+    phone: "+91 902654 XXXX", // Optional
   },
   
   // Social Links
   social: {
-    github: "https://github.com/abhishekgupta",
-    linkedin: "https://linkedin.com/in/abhishek-gupta",
-    twitter: "https://twitter.com/abhishekgupta", // Optional
-    instagram: "https://instagram.com/abhishekgupta", // Optional
+    github: "https://github.com/wiz-abhi",
+    linkedin: "https://www.linkedin.com/in/abhishek-gupta-4b03b9276",
+    twitter: "https://twitter.com/wiz-abhi", // Optional
+    instagram: "https://instagram.com/abhi.at_insta", // Optional
   },
   
   // About Section
@@ -35,7 +35,7 @@ export const personalInfo = {
       degree: "B.Tech CSE Student",
       year: "2nd Year",
       duration: "2023 — 2027",
-      institution: "University/College Name", // Update with your college name
+      institution: "Galgotias College of Engg and Technology", // Update with your college name
       status: "Active Learner"
     },
     
