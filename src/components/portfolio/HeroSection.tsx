@@ -219,20 +219,14 @@ export default function HeroSection() {
                       */}
                       
                       {/* Temporary placeholder - Remove when adding your photo */}
-                      <div className="text-center p-8">
-                        <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
-                          <span className="text-white text-4xl font-bold">AG</span>
-                        </div>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm font-medium">
-                          Add your professional photo here
-                        </p>
-                        <p className="text-gray-500 dark:text-gray-500 text-xs mt-2">
-                          Replace this placeholder in<br />
-                          <code className="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded text-xs">
-                            /public/your-photo.jpg
-                          </code>
-                        </p>
-                      </div>
+                            <Image
+                        src="/abhishek-photo.jpg"
+                        alt="Abhishek Gupta - Professional Photo"
+                        width={400}
+                        height={400}
+                        className="w-full h-full object-cover"
+                        priority
+                      />
 
                       {/* Subtle Pattern Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5" />
